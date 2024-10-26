@@ -1,0 +1,1362 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body {
+  font-family: "Kanit", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.5;
+  color: #777;
+  padding-top: 50px;
+}
+section{
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  margin-bottom: .2vw;
+  padding: 5vw;
+  width: 1000px;
+  
+
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1.1s;
+  width: 100%;
+}
+
+footer section{
+  box-shadow: none;
+}
+.activetab{
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+/* Top Bar */
+.containertopbar {
+  background-color: rgb(203, 51, 51);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.left p, .left span {
+  margin-right: 10px;
+}
+
+/* Navbar */
+.navbar {
+
+  width: 100%;
+  
+height: 15vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  justify-content: space-between;
+  padding: 1vw;
+
+  background-color: white;
+}
+.menus{
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.navbar-brand{
+  margin-top: 2.5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.menus a {
+  color: black;
+  text-decoration: none;
+  margin: 0 20px;
+}
+.navbar-brand img{
+  margin: 10px;
+}
+
+.sidenav{
+  display: none;
+}
+.navopen{
+  display: none;
+}
+
+
+
+/* Home Section */
+
+.homepage{
+ 
+  height: auto;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+
+}
+.homeleft{
+  background: linear-gradient(rgba(255, 255, 255, 0.021),rgb(0, 0, 0)),url(../img/carousel-1.jpg);
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 80vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+/* animations for contenth1 */
+.homeleft p{
+  margin: 10px 0;
+  position: relative;
+  top: -300px;
+  animation: fromtop 2s ;
+  animation-fill-mode: forwards;
+  color: white;
+}
+@keyframes fromtop{
+  0%{
+      top: -300px;
+  }
+ 
+  100%{
+      top: 3px;
+  }
+}
+.homeleft h5{
+  color: white;
+  margin: 10px 0;
+  position: relative;
+  line-height: 1.5vh;
+  left: -1100px;
+  animation: left ;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-delay: 1.6s;
+  font-family: sans-serif;
+}
+@keyframes left{
+  0%{
+      left: -450px;
+  }
+  100%{
+  left: 0;
+  }
+}
+.homeleft h2{
+  margin: 10px 0;
+  font-size: 40px;
+  opacity: 0;
+   color: white;
+  animation: apear ;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-delay: 1.5s;
+}
+@keyframes apear{
+  0%{
+      opacity: 0;
+  }
+  100%{
+  opacity: 1;
+  }
+}
+
+
+
+.containerabout{
+   height: 80vh;
+ 
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+}
+.containeraboutleft{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  width: 30%;
+  background-color: rgb(70, 70, 234);
+}
+.containeraboutleft i{
+  color: white;
+  font-size: 3vw;
+}
+
+.containeraboutleft h4{
+  font-size: 8vw;
+  color: white;
+}
+.containeraboutleft h1{
+  font-size: 3vw;
+  color: white;
+}
+.containeraboutright{
+  
+  width: 60%;
+  height: 80vh;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.content{
+  width: 75%;
+}
+.containeraboutright .content h6{
+  font-size: 2vw;
+  color: rgb(203, 51, 51);
+}
+
+.dervicerow{
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  display: flex;
+  flex-wrap: wrap;
+
+}
+.col-sm-6{
+  
+  width: 40%;
+  margin: 1vw;
+}
+.col-sm-6 h1{
+  color: rgb(70, 70, 234);
+}
+
+
+.whyus{
+
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  display: flex; 
+  height: auto;
+}
+.whyusleft{
+  text-align: left;
+  width: 50%;
+  height: 70vh;
+}
+.whyusleft h6{
+  font-size: 1.5vw;
+  color: rgb(203, 51, 51);
+}
+.list-inline{
+  margin-top: 2vw;
+}
+.list-inline i{
+  font-size: 1.5vw;
+  color: black;
+  margin-right: 10px;
+}
+
+
+.whyusleft button{
+  background-color: rgb(70, 70, 234);
+  border: none;
+  padding: 12px;
+  margin-top: 10px;
+}
+.whyusleft button a{
+  text-decoration: none;
+  color: white;
+}
+.whyusright{
+  width: 45%;
+  height: 70vh;
+  background-image: url(../img/fabrication.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+
+
+
+
+
+
+/* Services */
+.services{
+
+
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  height: auto;
+}
+
+.servicecontent{
+  
+  width: 35%;
+  height: 60vh;
+  text-align: left;
+}
+.servicecontent h6{
+  font-size: 1.5vw;
+  color: rgb(203, 51, 51);
+}
+.servicecontent button{
+  background-color: rgb(70, 70, 234);
+  border: none;
+  padding: 12px;
+  margin-top: 10px;
+}
+.servicecontent button a{
+  text-decoration: none;
+  color: white;
+}
+.theservices{
+  
+  width: 60%;
+  height: auto;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+
+.service1{
+  width: 40%;
+  height: auto;
+  border-radius: 7px;
+  margin: 1vw;
+  padding: 10px;
+  background-color: rgb(70, 70, 234);
+ color: white;
+}
+.service1 h3{
+  font-size: 5vw;
+  color: white;
+}
+
+ 
+/* Projects */
+.projecthed{
+  text-align: center;
+  
+}
+.projecthed h6{
+  font-size: 1.5vw;
+  color: rgb(203, 51, 51);
+}
+.portfoliocontainer{
+ 
+  height: auto;
+ 
+}
+.images{
+ 
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.image{
+  width: 25vw;
+  height: 45vh;
+  margin: 1vw;
+}
+.image img{
+  width: 100%;
+  height: 100%;
+}
+@media screen and (max-width: 800px){
+  .image{
+
+  width: 100%;
+  display: flex;
+   
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+  .image{
+  width: 100%;
+  height: 45vh;
+  margin: 1vw;
+}
+}
+
+
+/* Blog */
+.blogstart{
+
+  height: auto;
+}
+
+.blogs{
+  
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-around;
+}
+
+.bloghed{
+  text-align: center;
+}
+.bloghed h6{
+  font-size: 1.5vw;
+  color: rgb(203, 51, 51);
+}
+
+.blog1{
+  
+  width: 30%;
+  margin: 2vw;
+  height: 64vh;
+}
+.blog1 img{
+  height: 60%;
+  width: 100%;
+}
+.blogbtn{
+  display: flex;
+  
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+
+}
+.blogbtn a{
+  
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin: 10px;
+  background-color: rgb(229, 41, 41);
+  color: white;
+  width: 3vw;
+  height: 6vh;
+}
+.blogbtn h5{
+  color: black;
+}
+
+
+.containertestimonials{
+      
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+}
+.testimonies{
+  display: flex;
+}
+
+
+.testimonialleft{
+ 
+  width: 80%;
+  height: 70vh;
+}
+.testimonialleft h6{
+  font-size: 1.5vw;
+  color: rgb(203, 51, 51);
+}
+.testimonial1{
+  width: 50%;
+  text-align: left;
+  margin: 2vw;
+
+}
+.testimonial1 h5{
+  color: black;
+}
+
+/* Contact */
+.contactpage{
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.contactleft{
+  background-color: rgb(70, 70, 234);
+  color: white;
+  width: 30%;
+  height: 90vh;
+  padding: 2vw;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.contactleft h1{
+  color: rgb(203, 51, 51);
+}
+.contactrow{
+ 
+  text-align: left;
+  width: 100%;
+  margin: 1vw;
+}
+.location{
+  width: 100%;
+  height: 35vh;
+  
+}
+.contactright{
+  height: 90vh;
+  width: 50%;
+}
+.contact-form form{
+  width: 90%;
+}
+
+.contactright form input{
+  padding: 20px;
+  margin: 20px;
+  width: 100%;
+}
+.contactright form textarea{
+  width: 100%;
+  max-height: 20vh;
+  margin: 20px;
+}
+form .btn input{
+  padding: 10px;
+  width: 120px;
+  background-color: rgb(203, 51, 51);
+    color: white;
+  border: none;
+}
+
+
+ 
+/* Footer */
+.footer {
+ background-color: rgb(203, 51, 51);
+  color: white;
+  padding: 3vw 1vw;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-section {
+  width: 22%;
+  margin: 1vw 0;
+}
+
+.footer-section h4 {
+  color: white;
+  margin-bottom: 10px;
+}
+
+.footer-section p, .footer-section a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+.footer-section ul li{
+  margin: 10px;
+}
+.footer-section ul li i{
+  margin-right: 10px;
+}
+
+.footer-section a:hover {
+  text-decoration: underline;
+}
+
+.social-media {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.social-icon {
+  background-color: white;
+  color: blue;
+  border-radius: 50%;
+  padding: 10px;
+  display: inline-block;
+  font-size: 1rem;
+}
+
+.social-icon:hover {
+  background-color: rgb(229, 41, 41);
+  color: white;
+}
+
+.newsletter form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.newsletter input[type="email"] {
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+
+.newsletter button {
+  padding: 10px;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+
+.footer-bottom {
+  text-align: center;
+  padding: 1vw;
+  font-size: 0.8rem;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 838px) {
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+     
+      line-height: 1.5;
+      color: #777;
+    }
+    section{
+      box-shadow: none;
+      padding: 2vw;
+    }
+   
+    /* Style the navigation menu */
+
+
+    /* Top Bar */
+    .containertopbar {
+      
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+    }
+    .left{
+     
+      font-size: 4vw;
+      padding: 0;
+      text-align: left;
+    }
+    .right{
+      font-size: 3vw;
+     
+    }
+    .left p, .left span {
+      margin-right: 0;
+    }
+    .navopen{
+     
+      display: block;
+      color: rgb(70, 70, 234);
+    }
+    .navopen i{
+      font-size: 10vw;
+      cursor: pointer;
+    }
+    /* Navbar */
+    .navbar {
+      
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1vw;
+       height: auto;
+     
+    }
+    .menus{
+      display: none;
+    }
+    .navbar-brand{
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      justify-content: center;
+    }
+    .navbar-brand img{
+      padding: 3px;
+    }
+    .menus a {
+      color: white;
+      text-decoration: none;
+      margin: 0 20px;
+    }
+    
+    .sidenav{
+      display: block;
+    }
+    .sidenav span{
+      height: 30px;
+     
+     
+    }
+
+    /* The side navigation menu */
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  margin-top: 6.5vh;
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color:  rgb(70, 70, 234); /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s;
+  padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+
+    /* Home Section */
+    
+
+/* Home Section */
+
+.homepage{
+ 
+  height: auto;
+  width: 100%;
+  
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+
+}
+.homeleft{
+  background: linear-gradient(rgba(255, 255, 255, 0.021),rgb(0, 0, 0)),url(../img/worker.jpg);
+  
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 75vh;
+ 
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+/* animations for contenth1 */
+.homeleft p{
+  margin: 10px 0;
+  position: relative;
+  top: -300px;
+  animation: fromtop 2s ;
+  animation-fill-mode: forwards;
+  color: white;
+}
+@keyframes fromtop{
+  0%{
+      top: -300px;
+  }
+ 
+  100%{
+      top: 3px;
+  }
+}
+.homeleft h5{
+  color: white;
+  line-height: 2vh;
+  margin: 10px 0;
+  position: relative;
+  left: -650px;
+  animation: left ;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-delay: 1.6s;
+}
+@keyframes left{
+  0%{
+      left: -450px;
+  }
+  100%{
+  left: 0;
+  }
+}
+.homeleft h2{
+  line-height: 5vh;
+  margin: 10px 0;
+  font-size: 40px;
+  opacity: 0;
+   color: white;
+  animation: apear ;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-delay: 1.5s;
+}
+@keyframes apear{
+  0%{
+      opacity: 0;
+  }
+  100%{
+  opacity: 1;
+  }
+}
+
+.homeright{
+  display: none;
+  height: 80vh;
+  width: 100%;
+  background-image: url(../img/fabrication.avif);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+    
+  .containerabout{
+       height: auto;
+     
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+    }
+    .containeraboutleft{
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      height: 40vh;
+      width: 100%;
+      
+    }
+    .containeraboutleft i{
+      font-size: 10vw;
+      color: white;
+      padding: 10px;
+    }
+    .containeraboutleft h4{
+      font-size: 10vw;
+      color: white;
+     
+    }
+    .containeraboutleft h1{
+      font-size: 3vw;
+      color: white;
+    }
+    .containeraboutright{
+      
+      width: 100%;
+      height: auto;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+    }
+    
+    .content{
+      width: 90%;
+    }
+    .content h2{
+      line-height: 4vh;
+     
+    }
+    .containeraboutright .content h6{
+      font-size: 10vw;
+     
+      
+    }
+    
+    .dervicerow{
+      justify-content: center;
+      align-items: center;
+      text-align: left;
+      display: flex;
+      flex-wrap: wrap;
+    
+    }
+    .col-sm-6 h1{
+      color: rgb(70, 70, 234);
+    }
+    .col-sm-6{
+      
+      width: 45%;
+      margin: 2vw;
+    }
+  
+  
+    
+  .whyus{
+    
+      align-items: center;
+      justify-content: space-around;
+      text-align: center;
+      display: flex; 
+      flex-direction: column;
+      height: auto;
+    }
+    .whyusleft{
+      text-align: left;
+      width: 90%;
+      height: auto;
+    }
+    .whyusleft h6{
+      font-size: 10vw;
+     
+    }
+    .list-inline{
+      margin-top: 2vw;
+     
+    }
+    .list-inline ul li h5{
+     font-size: 5vw;
+
+    }
+    .list-inline i{
+      font-size: 5vw;
+      color: black;
+      margin-right: 10px;
+    }
+    
+    
+    .whyusleft button{
+     
+      border: none;
+      padding: 12px;
+      margin-top: 10px;
+    }
+    .whyusleft button a{
+      text-decoration: none;
+      color: white;
+    }
+    .whyusright{
+      width: 100%;
+      margin-top: 2vw;
+      height: 70vh;
+      background-image: url(../img/fabrication.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      
+    }
+    
+    
+    
+    
+  
+    
+    /* Services */
+    .services{
+    
+  
+      justify-content: space-around;
+      align-items: center;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      height: auto;
+    }
+    
+    .servicecontent{
+      
+      width: 90%;
+      height: 60vh;
+      text-align: left;
+    }
+    .servicecontent h6{
+      font-size: 10vw;
+      line-height: 5vh;
+      
+    }
+    .servicecontent button{
+     
+      border: none;
+      padding: 12px;
+      margin-top: 10px;
+    }
+    .servicecontent button a{
+      text-decoration: none;
+      color: white;
+    }
+    .theservices{
+      
+      width: 100%;
+      height: auto;
+      justify-content: space-around;
+      align-items: center;
+      text-align: center;
+      display: flex;
+      flex-wrap: wrap;
+      
+    }
+    
+    .service1{
+      width: 95%;
+      height: 35vh;
+      margin: 1vw;
+      padding: 10px;
+     
+     color: white;
+
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+     display: flex;
+     flex-direction: column;
+    }
+    .service1 h3{
+      color: white;
+      font-size: 10vw;
+      padding: 10px;
+    }
+    
+     
+    /* Projects */
+  .projecthed{
+      text-align: center;
+      
+    }
+    .projecthed h6{
+      font-size: 10vw;
+     
+    }
+    .portfoliocontainer{
+     
+      height: auto;
+     
+    }
+    .images{
+     
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .image{
+      width: 25vw;
+      height: 45vh;
+      margin: 1vw;
+    }
+    .image img{
+      width: 100%;
+      height: 100%;
+    }
+    @media screen and (max-width: 800px){
+      .image{
+    
+      width: 100%;
+      display: flex;
+       
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+      .image{
+      width: 100%;
+      height: 45vh;
+      margin: 1vw;
+    }
+    }
+    
+    
+    /* Blog */
+  .blogstart{
+    
+      height: auto;
+    }
+    
+    .blogs{
+      
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      justify-content: space-around;
+    }
+    
+    .bloghed{
+      text-align: center;
+    }
+    .bloghed h6{
+      font-size: 10vw;
+     
+    }
+    
+    .blog1{
+      
+      width: 90%;
+      margin: 2vw;
+      height: 64vh;
+    }
+    .blog1 img{
+      height: 60%;
+      width: 100%;
+    }
+    .blogbtn{
+      display: flex;
+      
+      display: flex;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+    
+    }
+    .blogbtn a{
+      
+      display: flex;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      margin: 5px;
+     
+      color: white;
+      width: 10vw;
+      height: 5vh;
+    }
+    .blogbtn h5{
+      color: black;
+    }
+    
+    
+  .containertestimonials{
+          
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      display: flex;
+     
+    }
+    .testimonies{
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      display: flex;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    
+    .testimonialleft{
+     
+      width: 100%;
+      height: auto;
+    }
+    .testimonialleft h6{
+      font-size: 10vw;
+     
+    }
+    .testimonial1{
+      width: 90%;
+      text-align: left;
+      margin: 2vw;
+    
+    }
+    .testimonial1 h5{
+      color: black;
+    }
+    
+    /* Contact */
+    .contactpage{
+     flex-direction: column;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+    }
+    
+    .contactleft{
+      
+      color: white;
+      width: 100%;
+      height: auto;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+  
+    .contactright{
+      height: auto;
+      width: 100%;
+    }
+    .contact-form form{
+      width: 90%;
+    }
+    
+    .contactright form input{
+      padding: 20px;
+      margin: 20px;
+      width: 100%;
+    }
+    .contactright form textarea{
+      width: 100%;
+      margin: 20px;
+    }
+    form button{
+      padding: 10px;
+      
+      color: white;
+      border: none;
+    }
+    
+    
+     
+    /* Footer */
+    .footer {
+      
+      color: white;
+      padding: 3vw 1vw;
+    }
+    
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    
+    .footer-section {
+      width: 100%;
+      margin: 1vw auto;
+      
+    }
+    
+    .footer-section h4 {
+    
+      margin-bottom: 10px;
+    }
+    
+    .footer-section p, .footer-section a {
+      color: white;
+      text-decoration: none;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+    
+    .footer-section a:hover {
+      text-decoration: underline;
+    }
+    
+
+    .newsletter form {
+      display: flex;
+      flex-direction: column;
+      margin-top: 10px;
+    }
+    
+    .newsletter input[type="email"] {
+      padding: 10px;
+      border: none;
+      border-radius: 3px;
+      margin-bottom: 10px;
+    }
+    
+    .newsletter button {
+      padding: 10px;
+    
+      border: none;
+      cursor: pointer;
+      border-radius: 3px;
+    }
+    
+  
+
+}
